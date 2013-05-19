@@ -11,13 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130519192350) do
+ActiveRecord::Schema.define(:version => 20130519193722) do
 
   create_table "authors", :force => true do |t|
     t.string   "name",       :null => false
     t.string   "email",      :null => false
     t.string   "bio"
     t.string   "password",   :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "cat"
+    t.integer  "post_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -36,6 +43,13 @@ ActiveRecord::Schema.define(:version => 20130519192350) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "author_id",  :null => false
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "tag"
+    t.integer  "post_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
