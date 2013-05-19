@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :body, :title
+  attr_accessible :body, :title, :author_id
   validates :title, :length => { :in => 4..80 }
   validates :body, :presence => true
   belongs_to :author
