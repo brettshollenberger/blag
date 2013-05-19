@@ -1,0 +1,11 @@
+<h3>
+	This is the index page for home
+</h3>
+
+<p>
+	You have <%= @songs.count %> songs saved.
+</p>
+<ol id = "songs">
+	<%= render :partial => "song", :collection => @songs %>
+</ol>
+
