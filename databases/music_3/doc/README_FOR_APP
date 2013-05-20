@@ -1,5 +1,0 @@
-This is a basic application that allow you to access the count of records in a single table.
-
-When you run this application, loading the index page will provide a count-based feedback on the number of songs in your application database.
-
-This application assumes that there is a Song table with title, artist, album and year fields.
