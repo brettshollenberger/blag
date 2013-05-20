@@ -1,0 +1,26 @@
+<h3>
+	This is the index page for home
+</h3>
+
+<p>
+	You have <%= @songs.count %> songs saved.
+</p>
+
+<p>
+	<%= form_for :song, :url => home_index_path, :method=> :get do |f| -%>
+	<p>
+		<%= f.label :title %>
+		<span>
+			<%= f.text_field :title %>
+		</span>
+	</p>
+	<p>
+	<%= f.submit "find song" %>
+	</p>
+	  
+	<% end -%>
+</p>
+<ol id = "songs">
+	<%= render :partial => "song", :collection => @songs %>
+</ol>
+
