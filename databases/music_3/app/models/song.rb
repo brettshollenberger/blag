@@ -1,5 +1,5 @@
 class Song < ActiveRecord::Base
-  attr_accessible :album, :artist, :title, :year
+  attr_accessible :album, :artist, :title, :year, :album_id, :artist_id
 
   validates_presence_of :year, :title
   validates_length_of :year, :is => 4
